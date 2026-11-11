@@ -781,8 +781,18 @@ input[type="range"]::-moz-range-thumb {
     right: 16px;
     bottom: auto;
     width: 224px;
+    max-height: calc(100vh - 96px);
+    overflow-y: auto;
     transform: none;
     opacity: 1;
+  }
+  .panel-head {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    background: rgba(247, 239, 224, 0.96);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
   }
   .panel.is-open { transform: none; }
   .panel.is-collapsed { transform: none; width: 188px; }
